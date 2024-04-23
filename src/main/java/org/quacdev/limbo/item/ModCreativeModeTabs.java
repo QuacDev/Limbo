@@ -25,6 +25,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.LIMBO_EYE.get());
 
                         output.accept(ModBlocks.LIMBO_BLOCK.get());
+                        output.accept(ModBlocks.END_ABYSSAL_CLUSTER.get());
                     })
                     .build());
 }
