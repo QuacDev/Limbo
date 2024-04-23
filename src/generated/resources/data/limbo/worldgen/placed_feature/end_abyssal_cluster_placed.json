@@ -2,8 +2,8 @@
   "feature": "limbo:end_abyssal_cluster",
   "placement": [
     {
-      "type": "minecraft:rarity_filter",
-      "chance": 5
+      "type": "minecraft:count",
+      "count": 10
     },
     {
       "type": "minecraft:in_square"
@@ -13,10 +13,10 @@
       "height": {
         "type": "minecraft:uniform",
         "max_inclusive": {
-          "below_top": 0
+          "absolute": 80
         },
         "min_inclusive": {
-          "below_top": 0
+          "absolute": 40
         }
       }
     },

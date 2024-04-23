@@ -1,5 +1,5 @@
-// 1.20.1	2024-04-23T21:03:35.7175229	Registries
-65b1bc0c6bc674a51427cb81820696df9c9885d4 data/limbo/forge/biome_modifier/add_end_abyssal_cluster.json
+// 1.20.1	2024-04-23T21:31:58.6015337	Registries
+ecfa2e78930bc7ddde3b3e765c58f4ad7d213dc6 data/limbo/forge/biome_modifier/add_end_abyssal_cluster.json
 f27116dee60e4c0ecd6bb8e14df44c8df7175f2a data/limbo/worldgen/biome/limbo_forest.json
 dcb673f5e2e5eec1b1551bba48b575f7b22a66ea data/limbo/worldgen/configured_feature/end_abyssal_cluster.json
-a085b6e5a63d33163c72adff1ff8ea64c1dee92d data/limbo/worldgen/placed_feature/end_abyssal_cluster_placed.json
+c559d43b0964b2ef50a7dcececbab89394b6a771 data/limbo/worldgen/placed_feature/end_abyssal_cluster_placed.json

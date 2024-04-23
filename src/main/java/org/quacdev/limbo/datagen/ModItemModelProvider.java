@@ -18,6 +18,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.LIMBO_EYE);
+        simpleItem(ModItems.ABYSSAL_CLUSTER_LOCATOR);
         simpleItem(ModItems.UNSTABLE_LIMBO_FRAGMENT);
         simpleItem(ModItems.STABILIZED_LIMBO_FRAGMENT);
     }

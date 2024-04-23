@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.UNSTABLE_LIMBO_FRAGMENT.get());
                         output.accept(ModItems.STABILIZED_LIMBO_FRAGMENT.get());
                         output.accept(ModItems.LIMBO_EYE.get());
+                        output.accept(ModItems.ABYSSAL_CLUSTER_LOCATOR.get());
 
                         output.accept(ModBlocks.LIMBO_BLOCK.get());
                         output.accept(ModBlocks.END_ABYSSAL_CLUSTER.get());
