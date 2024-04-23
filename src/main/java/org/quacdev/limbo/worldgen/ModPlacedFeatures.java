@@ -24,7 +24,9 @@ public class ModPlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, END_ABYSSAL_CLUSTER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_ABYSSAL_CLUSTER_KEY),
-                ModOrePlacement.commonOrePlacement(10, HeightRangePlacement.uniform(VerticalAnchor.absolute(40), VerticalAnchor.absolute(80))));
+                ModOrePlacement.commonOrePlacement(
+                        1,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

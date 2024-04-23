@@ -30,7 +30,7 @@ public class ModBlocks {
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_PURPLE)
                     .sound(SoundType.AMETHYST_CLUSTER).instrument(NoteBlockInstrument.CHIME)
-                    .strength(50.0f, 3600000.0f).lightLevel((p_60954_) -> 4).requiresCorrectToolForDrops())); // Obsidian Strength
+                    .strength(50.0f, 3600000.0f).requiresCorrectToolForDrops())); // Obsidian Strength
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -36,7 +36,7 @@ public class ModConfiguredFeatures {
         register(context, END_ABYSSAL_CLUSTER_KEY, Feature.ORE, new OreConfiguration(
                 endstoneReplaceable,
                 ModBlocks.END_ABYSSAL_CLUSTER.get().defaultBlockState(),
-                2)); // VEIN SIZE
+                3)); // VEIN SIZE
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
