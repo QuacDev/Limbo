@@ -16,6 +16,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.LIMBO_BLOCK);
+        blockWithItem(ModBlocks.END_ABYSSAL_CLUSTER);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

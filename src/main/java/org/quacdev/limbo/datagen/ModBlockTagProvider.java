@@ -7,6 +7,7 @@ import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 import org.quacdev.limbo.Limbo;
+import org.quacdev.limbo.block.ModBlocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -24,7 +25,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         //this.tag(BlockTags.MINEABLE_WITH_###)
                 //.add(ModBlocks.###.get());
 
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.END_ABYSSAL_CLUSTER.get());
+
         //this.tag(BlockTags.NEEDS_###_TOOL)
                 //.add(ModBlocks.###.get());
+
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.END_ABYSSAL_CLUSTER.get());
     }
 }

@@ -1,4 +1,7 @@
-// 1.20.1	2024-04-23T12:10:11.8279523	Block States: limbo
+// 1.20.1	2024-04-23T20:20:59.5164941	Block States: limbo
+359ae64200cdf6519afe7d88681dc5867df00242 assets/limbo/blockstates/end_abyssal_cluster.json
 8889db68b7f4f4f8fad26ed138f9a662ca1f33b0 assets/limbo/blockstates/limbo_block.json
+388f6377c1d870b912d8782b199b73c95a1e668e assets/limbo/models/block/end_abyssal_cluster.json
 ee7ce8fcd82c7d5d5da9a2088d0fb32ed3a65aa5 assets/limbo/models/block/limbo_block.json
+ec023f626262f728d03567a9f6737e286a1cebc6 assets/limbo/models/item/end_abyssal_cluster.json
 f69ccbc1fe505d23f60c9079a44bf11606e8c296 assets/limbo/models/item/limbo_block.json

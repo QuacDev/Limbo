@@ -13,6 +13,7 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import org.quacdev.limbo.block.ModBlocks;
+import org.quacdev.limbo.item.ModItems;
 
 import java.util.Set;
 
@@ -26,7 +27,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         //this.dropSelf(ModBlocks.###.get());
 
         //this.add(ModBlocks.###_ORE.get(),
-                //block -> createOreDrops(ModBlocks.###_ORE.get(), ModItems.###, #f, #f));
+                //block -> createFortuneOreDrops(ModBlocks.###_ORE.get(), ModItems.###.get(), #f, #f));
+
+        this.add(ModBlocks.END_ABYSSAL_CLUSTER.get(),
+                block -> createOreDrops(ModBlocks.END_ABYSSAL_CLUSTER.get(), ModItems.LIMBO_EYE.get(), 1, 3));
     }
 
     @Override
@@ -35,6 +39,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     }
 
     protected LootTable.Builder createOreDrops(Block block, Item item, float min, float max) {
+        return createSilkTouchDispatchTable(block,
+                this.applyExplosionDecay(block,
+                        LootItem.lootTableItem(item)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(min, max)))));
+    }
+
+    protected LootTable.Builder createFortuneOreDrops(Block block, Item item, float min, float max) {
         return createSilkTouchDispatchTable(block,
                 this.applyExplosionDecay(block,
                         LootItem.lootTableItem(item)

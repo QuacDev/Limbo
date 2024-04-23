@@ -22,13 +22,17 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Limbo.MODID);
 
-    public static final RegistryObject<Block> LIMBO_BLOCK = registerBlock("limbo_block", () -> new Block(BlockBehaviour.Properties.of()
+    public static final RegistryObject<Block> LIMBO_BLOCK = registerBlock("limbo_block", () -> new Block(
+            BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_BLACK)
                     .sound(SoundType.SCULK).instrument(NoteBlockInstrument.WITHER_SKELETON)
-                    .strength(-1.0F, 3600000.0F).noLootTable().lightLevel((p_152607_) -> 15)));
+                    .strength(-1.0F, 3600000.0F).noLootTable().lightLevel((p_60954_) -> 15)));
 
-
-
+    public static final RegistryObject<Block> END_ABYSSAL_CLUSTER = registerBlock("end_abyssal_cluster", () -> new Block(
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .sound(SoundType.AMETHYST_CLUSTER).instrument(NoteBlockInstrument.CHIME)
+                    .strength(4.0f, 3600000.0f).lightLevel((p_60954_) -> 4)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
