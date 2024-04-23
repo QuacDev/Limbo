@@ -6,7 +6,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,7 +15,6 @@ import org.quacdev.limbo.Limbo;
 import org.quacdev.limbo.item.ModItems;
 
 import java.util.function.Supplier;
-import java.util.function.ToIntFunction;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
@@ -32,8 +30,7 @@ public class ModBlocks {
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_PURPLE)
                     .sound(SoundType.AMETHYST_CLUSTER).instrument(NoteBlockInstrument.CHIME)
-                    .strength(4.0f, 3600000.0f).lightLevel((p_60954_) -> 4)));
-
+                    .strength(50.0f, 3600000.0f).lightLevel((p_60954_) -> 4).requiresCorrectToolForDrops())); // Obsidian Strength
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
