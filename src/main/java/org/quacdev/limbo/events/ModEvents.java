@@ -11,10 +11,4 @@ import org.quacdev.limbo.Limbo;
 @Mod.EventBusSubscriber(modid = Limbo.MODID)
 public class ModEvents {
 
-    @SubscribeEvent
-    public static void onMobSpawn(MobSpawnEvent event) {
-        if(event.getEntity().getType() == EntityType.COW) {
-            event.setCanceled(true);
-        }
-    }
 }
