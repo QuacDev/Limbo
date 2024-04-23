@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stabilized_limbo_fragment": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "limbo:stabilized_limbo_fragment"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "limbo:limbo_eye"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_stabilized_limbo_fragment",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "limbo:limbo_eye"
+    ]
+  },
+  "sends_telemetry_event": false
+}
