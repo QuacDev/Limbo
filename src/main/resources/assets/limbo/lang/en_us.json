@@ -2,8 +2,10 @@
   "item.limbo.unstable_limbo_fragment": "§kUnstable Limbo Fragment",
   "item.limbo.stabilized_limbo_fragment": "Stabilized Limbo Fragment",
   "item.limbo.limbo_eye": "Limbo Eye",
+  "item.limbo.abyssal_cluster_locator": "Abyssal Cluster Locator",
 
   "block.limbo.limbo_block": "§kLimbo Block",
+  "block.limbo.end_abyssal_cluster": "End Abyssal Cluster",
 
   "creativetab.limbo_tab": "Limbo"
 }

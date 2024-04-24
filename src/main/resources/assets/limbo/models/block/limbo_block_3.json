@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "limbo:block/limbo_block"
+    "all": "limbo:block/limbo_block_3"
   }
 }

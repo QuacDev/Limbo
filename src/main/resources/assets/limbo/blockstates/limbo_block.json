@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "charge_level=0": { "model": "limbo:block/limbo_block_0" },
+    "charge_level=1": { "model": "limbo:block/limbo_block_1" },
+    "charge_level=2": { "model": "limbo:block/limbo_block_2" },
+    "charge_level=3": { "model": "limbo:block/limbo_block_3" },
+    "charge_level=4": { "model": "limbo:block/limbo_block_4" },
+    "charge_level=5": { "model": "limbo:block/limbo_block_5" },
+    "charge_level=6": { "model": "limbo:block/limbo_block_6" },
+    "charge_level=7": { "model": "limbo:block/limbo_block_7" },
+    "charge_level=8": { "model": "limbo:block/limbo_block_8" },
+    "charge_level=9": { "model": "limbo:block/limbo_block_9" },
+    "charge_level=10": { "model": "limbo:block/limbo_block_10" }
+  }
+}
