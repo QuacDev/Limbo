@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stripped_abyssal_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "limbo:stripped_abyssal_wood"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "limbo:abyssal_planks_from_stripped_wood"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_stripped_abyssal_wood",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "limbo:abyssal_planks_from_stripped_wood"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -2,13 +2,17 @@ package org.quacdev.limbo.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import org.quacdev.limbo.Limbo;
+import org.quacdev.limbo.block.ModBlocks;
 import org.quacdev.limbo.item.ModItems;
 
 import java.util.Iterator;
@@ -45,6 +49,38 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 //.requires(Mod###.###.get())
                 //.unlockedBy(getHasName(Mod###.###.get()), has(Mod###.###.get()))
                 //.save(consumer);
+
+        woodRecipes(
+                ModBlocks.ABYSSAL_LOG.get(),
+                ModBlocks.STRIPPED_ABYSSAL_LOG.get(),
+                ModBlocks.ABYSSAL_WOOD.get(),
+                ModBlocks.STRIPPED_ABYSSAL_WOOD.get(),
+                ModBlocks.ABYSSAL_PLANKS.get(),
+                consumer);
+    }
+
+    private void woodRecipes(Block log, Block stripped_log, Block wood, Block stripped_wood, Block planks, Consumer<FinishedRecipe> consumer) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, planks, 4)
+                .requires(log).unlockedBy(getHasName(log), has(log)).save(consumer, new ResourceLocation(Limbo.MODID, a(planks.getDescriptionId()) + "_from_log"));
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, planks, 4)
+                .requires(stripped_log).unlockedBy(getHasName(stripped_log), has(stripped_log)).save(consumer, new ResourceLocation(Limbo.MODID, a(planks.getDescriptionId()) + "_from_stripped_log"));
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, planks, 4)
+                .requires(wood).unlockedBy(getHasName(wood), has(wood)).save(consumer, new ResourceLocation(Limbo.MODID, a(planks.getDescriptionId()) + "_from_wood"));
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, planks, 4)
+                .requires(stripped_wood).unlockedBy(getHasName(stripped_wood), has(stripped_wood)).save(consumer, new ResourceLocation(Limbo.MODID, a(planks.getDescriptionId()) + "_from_stripped_wood"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, wood, 3)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', log)
+                .unlockedBy(getHasName(log), has(log))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, stripped_wood, 3)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', stripped_log)
+                .unlockedBy(getHasName(stripped_log), has(stripped_log))
+                .save(consumer);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> finishedRecipeConsumer, List<ItemLike> ingredients, RecipeCategory category, ItemLike result, float experience, int cookingTime, String group) {
@@ -67,5 +103,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .save(finishedRecipeConsumer, Limbo.MODID + getItemName(result) + p_249236_ + "_" + getItemName(itemlike));
         }
 
+    }
+
+    private String a(String a) {
+        return a.replace("block."+Limbo.MODID+".", "");
     }
 }

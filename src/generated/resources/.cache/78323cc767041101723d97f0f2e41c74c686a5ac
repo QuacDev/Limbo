@@ -1,3 +1,6 @@
-// 1.20.1	2024-04-23T20:20:59.5144937	Tags for minecraft:block mod id limbo
+// 1.20.1	2024-04-24T20:44:24.0355512	Tags for minecraft:block mod id limbo
+b9f9655c4116d0f056fd3bbdaac398871a1db4d6 data/minecraft/tags/blocks/logs_that_burn.json
+9303f774a029e30786309a65d849b3bb426ab367 data/minecraft/tags/blocks/mineable/axe.json
 172f846ecae9944f7c6896f51e21a4c7d3d97c72 data/minecraft/tags/blocks/mineable/pickaxe.json
-172f846ecae9944f7c6896f51e21a4c7d3d97c72 data/minecraft/tags/blocks/needs_diamond_tool.json
+eef1e5b688a5185d8178474cce1d40476d7fe1fb data/minecraft/tags/blocks/needs_diamond_tool.json
+2b096928b66ebe8dc32774c8f0dfc1b14ecdb568 data/minecraft/tags/blocks/planks.json

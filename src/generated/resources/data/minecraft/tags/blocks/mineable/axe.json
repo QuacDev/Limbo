@@ -1,8 +1,7 @@
 {
   "values": [
-    "limbo:end_abyssal_cluster",
     "limbo:abyssal_log",
     "limbo:stripped_abyssal_log",
-    "limbo:abyssal_leaves"
+    "limbo:stripped_abyssal_wood"
   ]
 }

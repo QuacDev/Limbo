@@ -31,6 +31,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.END_ABYSSAL_CLUSTER.get(),
                 block -> createOreDrops(ModBlocks.END_ABYSSAL_CLUSTER.get(), ModItems.LIMBO_EYE.get(), 1, 3));
+
+
+        this.dropSelf(ModBlocks.ABYSSAL_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_ABYSSAL_LOG.get());
+        this.dropSelf(ModBlocks.ABYSSAL_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_ABYSSAL_WOOD.get());
+        this.dropSelf(ModBlocks.ABYSSAL_PLANKS.get());
+        this.add(ModBlocks.ABYSSAL_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.LIMBO_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     @Override

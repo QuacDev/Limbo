@@ -1,2 +1,8 @@
-// 1.20.1	2024-04-23T20:17:26.8944959	Loot Tables
+// 1.20.1	2024-04-24T20:44:24.0365559	Loot Tables
+047cd068b399aef97a90071bb52370bd184d9045 data/limbo/loot_tables/blocks/abyssal_leaves.json
+453cf0dba3bdc87078c3714ddfd6ba3bbe82e62a data/limbo/loot_tables/blocks/abyssal_log.json
+c568ebdc75531b4321a65d961000ade2a277d918 data/limbo/loot_tables/blocks/abyssal_planks.json
+0ca62590d2ccfebd77da9ea5814b94391c098d81 data/limbo/loot_tables/blocks/abyssal_wood.json
 60d3b6af2bed184815f1f060343b9faedef52da4 data/limbo/loot_tables/blocks/end_abyssal_cluster.json
+d4c47bf7bf8101a89c3fb6c37f4742945cd108ff data/limbo/loot_tables/blocks/stripped_abyssal_log.json
+156ae2916bd28a9b24bc1e6e02079a5b4bcc5213 data/limbo/loot_tables/blocks/stripped_abyssal_wood.json

@@ -31,5 +31,21 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 //.add(ModBlocks.###.get());
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.END_ABYSSAL_CLUSTER.get());
+
+        this.tag(BlockTags.MINEABLE_WITH_AXE).add(
+                ModBlocks.ABYSSAL_LOG.get(),
+                ModBlocks.STRIPPED_ABYSSAL_LOG.get(),
+                ModBlocks.STRIPPED_ABYSSAL_WOOD.get());
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
+                ModBlocks.ABYSSAL_LOG.get(),
+                ModBlocks.STRIPPED_ABYSSAL_LOG.get(),
+                ModBlocks.ABYSSAL_LEAVES.get());
+        this.tag(BlockTags.LOGS_THAT_BURN).add(
+                ModBlocks.ABYSSAL_LOG.get(),
+                ModBlocks.ABYSSAL_WOOD.get(),
+                ModBlocks.STRIPPED_ABYSSAL_LOG.get(),
+                ModBlocks.STRIPPED_ABYSSAL_WOOD.get());
+        this.tag(BlockTags.PLANKS).add(
+                ModBlocks.ABYSSAL_PLANKS.get());
     }
 }

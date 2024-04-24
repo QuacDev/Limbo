@@ -13,6 +13,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.quacdev.limbo.Limbo;
 import org.quacdev.limbo.block.custom.LimboBlock;
+import org.quacdev.limbo.block.custom.ModLeavesBlock;
+import org.quacdev.limbo.block.custom.ModNonFlammableRotatedPillarBlock;
+import org.quacdev.limbo.block.custom.ModPlankBlock;
 import org.quacdev.limbo.item.ModItems;
 
 import java.util.function.Supplier;
@@ -27,11 +30,35 @@ public class ModBlocks {
                     .sound(SoundType.SCULK).instrument(NoteBlockInstrument.WITHER_SKELETON)
                     .strength(-1.0F, 3600000.0F).noLootTable().lightLevel((p_60954_) -> 15)));
 
+    //region Abyssal
     public static final RegistryObject<Block> END_ABYSSAL_CLUSTER = registerBlock("end_abyssal_cluster", () -> new Block(
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_PURPLE)
                     .sound(SoundType.AMETHYST_CLUSTER).instrument(NoteBlockInstrument.CHIME)
                     .strength(50.0f, 3600000.0f).requiresCorrectToolForDrops())); // Obsidian Strength
+
+    //region Abyssal Wood
+    public static final RegistryObject<Block> ABYSSAL_LOG = registerBlock("abyssal_log", () -> new ModNonFlammableRotatedPillarBlock(
+            BlockBehaviour.Properties.copy(Blocks.DARK_OAK_LOG)
+                    .mapColor(MapColor.COLOR_PURPLE).strength(15.0f, 5.0f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> STRIPPED_ABYSSAL_LOG = registerBlock("stripped_abyssal_log", () -> new ModNonFlammableRotatedPillarBlock(
+            BlockBehaviour.Properties.copy(Blocks.STRIPPED_DARK_OAK_LOG)
+                    .mapColor(MapColor.COLOR_PURPLE).strength(15.0f, 5.0f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ABYSSAL_WOOD = registerBlock("abyssal_wood", () -> new ModNonFlammableRotatedPillarBlock(
+            BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD)
+                    .mapColor(MapColor.COLOR_PURPLE).strength(15.0f, 5.0f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> STRIPPED_ABYSSAL_WOOD = registerBlock("stripped_abyssal_wood", () -> new ModNonFlammableRotatedPillarBlock(
+            BlockBehaviour.Properties.copy(Blocks.STRIPPED_DARK_OAK_WOOD)
+                    .mapColor(MapColor.COLOR_PURPLE).strength(15.0f, 5.0f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ABYSSAL_PLANKS = registerBlock("abyssal_planks", () -> new ModPlankBlock(
+            BlockBehaviour.Properties.copy(Blocks.DARK_OAK_PLANKS)
+                    .mapColor(MapColor.COLOR_PURPLE).requiresCorrectToolForDrops(), false, 0, 0));
+    public static final RegistryObject<Block> ABYSSAL_LEAVES = registerBlock("abyssal_leaves", () -> new ModLeavesBlock(
+            BlockBehaviour.Properties.copy(Blocks.DARK_OAK_LEAVES)
+                    .mapColor(MapColor.COLOR_PURPLE).requiresCorrectToolForDrops(), false, 0, 0));
+    //endregion
+    //endregion
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

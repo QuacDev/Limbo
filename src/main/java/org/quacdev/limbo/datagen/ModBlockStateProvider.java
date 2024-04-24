@@ -1,9 +1,13 @@
 package org.quacdev.limbo.datagen;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.quacdev.limbo.Limbo;
 import org.quacdev.limbo.block.ModBlocks;
@@ -17,9 +21,31 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         //blockWithItem(ModBlocks.LIMBO_BLOCK); REPLACED BY HAND
         blockWithItem(ModBlocks.END_ABYSSAL_CLUSTER);
+
+        logBlock(((RotatedPillarBlock) ModBlocks.ABYSSAL_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.ABYSSAL_WOOD.get()), blockTexture(ModBlocks.ABYSSAL_LOG.get()), blockTexture(ModBlocks.ABYSSAL_LOG.get()));
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ABYSSAL_LOG.get()), blockTexture(ModBlocks.STRIPPED_ABYSSAL_LOG.get()),
+                new ResourceLocation(Limbo.MODID, "block/stripped_abyssal_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ABYSSAL_WOOD.get()), blockTexture(ModBlocks.STRIPPED_ABYSSAL_LOG.get()), blockTexture(ModBlocks.STRIPPED_ABYSSAL_LOG.get()));
+
+        blockItem(ModBlocks.ABYSSAL_LOG);
+        blockItem(ModBlocks.STRIPPED_ABYSSAL_LOG);
+        blockItem(ModBlocks.ABYSSAL_WOOD);
+        blockItem(ModBlocks.STRIPPED_ABYSSAL_WOOD);
+        blockWithItem(ModBlocks.ABYSSAL_PLANKS);
+        leavesBlock(ModBlocks.ABYSSAL_LEAVES);
+    }
+
+    private void blockItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(Limbo.MODID + ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(), models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"), "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 }
