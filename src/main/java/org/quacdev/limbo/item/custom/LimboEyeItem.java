@@ -26,7 +26,7 @@ public class LimboEyeItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if(!level.isClientSide()) {
             BlockPos center = player.getOnPos().above(2);
-            int radius = 10;
+            int radius = 40;
             BlockPos.MutableBlockPos mutableBlockPos = new BlockPos.MutableBlockPos();
 
             for(int x = -radius; x <= radius; x++) {
@@ -37,7 +37,7 @@ public class LimboEyeItem extends Item {
                             BlockState blockState = level.getBlockState(mutableBlockPos);
                             //level.setBlockAndUpdate(pos, Blocks.RED_WOOL.defaultBlockState());
                             if(blockState.getBlock() == ModBlocks.LIMBO_BLOCK.get()) {
-                                LimboBlock.Charge(blockState, player.level(), mutableBlockPos, 10);
+                                LimboBlock.ChargeWithFalloff(blockState, player.level(), mutableBlockPos, 9, 1, 2, 5, center);
                             }
                         }
                     }

@@ -38,8 +38,8 @@ public class ModOverworldRegions extends Region {
                 .temperature(ParameterUtils.Temperature.span(ParameterUtils.Temperature.WARM, ParameterUtils.Temperature.HOT)) // Type of rain?
                 .humidity(ParameterUtils.Humidity.span(ParameterUtils.Humidity.ARID, ParameterUtils.Humidity.DRY)) // Im assuming Rain Stuff
                 .continentalness(ParameterUtils.Continentalness.FAR_INLAND) // How far from the Coast it is, ex. FULL_RANGE or COAST or OCEAN
-                .erosion(ParameterUtils.Erosion.EROSION_0, ParameterUtils.Erosion.EROSION_1) // Water In Caves //ParameterUtils.Erosion.EROSION_0 // Climate.Parameter.span(0.f, 0.f)
-                .depth(ParameterUtils.Depth.FULL_RANGE) // How Far Down It Generates
+                .erosion(ParameterUtils.Erosion.EROSION_0, ParameterUtils.Erosion.EROSION_0) // Water In Caves //ParameterUtils.Erosion.EROSION_0 // Climate.Parameter.span(0.f, 0.f)
+                .depth(ParameterUtils.Depth.SURFACE) // How Far Down It Generates
                 .weirdness(ParameterUtils.Weirdness.VALLEY) // Height Difference
                 .build().forEach(point -> builder.add(point, ModBiomes.LIMBO_FOREST));
 
