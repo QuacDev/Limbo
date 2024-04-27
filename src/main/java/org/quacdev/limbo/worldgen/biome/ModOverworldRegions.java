@@ -5,7 +5,6 @@ import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.Climate;
 import terrablender.api.ParameterUtils;
 import terrablender.api.Region;
@@ -41,7 +40,7 @@ public class ModOverworldRegions extends Region {
                 .erosion(ParameterUtils.Erosion.EROSION_0, ParameterUtils.Erosion.EROSION_0) // Water In Caves //ParameterUtils.Erosion.EROSION_0 // Climate.Parameter.span(0.f, 0.f)
                 .depth(ParameterUtils.Depth.SURFACE) // How Far Down It Generates
                 .weirdness(ParameterUtils.Weirdness.VALLEY) // Height Difference
-                .build().forEach(point -> builder.add(point, ModBiomes.LIMBO_FOREST));
+                .build().forEach(point -> builder.add(point, ModBiomes.ABYSSAL_FOREST));
 
         // Add our points to the mapper
         builder.build().forEach(mapper);
