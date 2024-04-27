@@ -34,6 +34,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STRIPPED_ABYSSAL_WOOD.get());
                         output.accept(ModBlocks.ABYSSAL_PLANKS.get());
                         output.accept(ModBlocks.ABYSSAL_LEAVES.get());
+                        output.accept(ModBlocks.ABYSSAL_SAPLING.get());
+                        output.accept(ModBlocks.ABYSSAL_GRASS_BLOCK.get());
                     })
                     .build());
 }

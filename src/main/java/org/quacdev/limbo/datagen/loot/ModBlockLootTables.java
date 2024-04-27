@@ -38,7 +38,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ABYSSAL_WOOD.get());
         this.dropSelf(ModBlocks.STRIPPED_ABYSSAL_WOOD.get());
         this.dropSelf(ModBlocks.ABYSSAL_PLANKS.get());
-        this.add(ModBlocks.ABYSSAL_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.LIMBO_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.ABYSSAL_SAPLING.get());
+        this.add(ModBlocks.ABYSSAL_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.ABYSSAL_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     @Override

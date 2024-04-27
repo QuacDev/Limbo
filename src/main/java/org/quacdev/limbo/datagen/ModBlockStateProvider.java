@@ -35,6 +35,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_ABYSSAL_WOOD);
         blockWithItem(ModBlocks.ABYSSAL_PLANKS);
         leavesBlock(ModBlocks.ABYSSAL_LEAVES);
+        saplingBlock(ModBlocks.ABYSSAL_SAPLING);
+        blockWithItem(ModBlocks.ABYSSAL_GRASS_BLOCK);
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
@@ -47,5 +49,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"), "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 }
