@@ -26,6 +26,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LIMBO_BLOCK.get());
 
                         // ABYSSAL
+                        output.accept(ModBlocks.ABYSSAL_GRASS_BLOCK.get());
+                        output.accept(ModBlocks.ABYSSAL_DIRT.get());
+
                         output.accept(ModBlocks.END_ABYSSAL_CLUSTER.get());
 
                         output.accept(ModBlocks.ABYSSAL_LOG.get());
@@ -35,7 +38,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ABYSSAL_PLANKS.get());
                         output.accept(ModBlocks.ABYSSAL_LEAVES.get());
                         output.accept(ModBlocks.ABYSSAL_SAPLING.get());
-                        output.accept(ModBlocks.ABYSSAL_GRASS_BLOCK.get());
                     })
                     .build());
 }

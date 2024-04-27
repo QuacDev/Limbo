@@ -1,6 +1,8 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "all": "limbo:block/abyssal_grass_block"
+    "bottom": "limbo:block/abyssal_dirt",
+    "side": "limbo:block/abyssal_grass_block",
+    "top": "limbo:block/abyssal_grass_block_top"
   }
 }

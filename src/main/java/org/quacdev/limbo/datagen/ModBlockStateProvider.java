@@ -36,7 +36,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ABYSSAL_PLANKS);
         leavesBlock(ModBlocks.ABYSSAL_LEAVES);
         saplingBlock(ModBlocks.ABYSSAL_SAPLING);
-        blockWithItem(ModBlocks.ABYSSAL_GRASS_BLOCK);
+
+        topBottomBlock(ModBlocks.ABYSSAL_GRASS_BLOCK, "abyssal_grass_block", "abyssal_dirt", "abyssal_grass_block_top");
+        blockItem(ModBlocks.ABYSSAL_GRASS_BLOCK);
+        blockWithItem(ModBlocks.ABYSSAL_DIRT);
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
@@ -54,5 +57,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlock(blockRegistryObject.get(),
                 models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void topBottomBlock(RegistryObject<Block> blockRegistryObject, String side, String bottom, String top) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cubeBottomTop(
+                        ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(),
+                        new ResourceLocation(Limbo.MODID, "block/" + side),
+                        new ResourceLocation(Limbo.MODID, "block/" + bottom),
+                        new ResourceLocation(Limbo.MODID, "block/" + top)));
     }
 }

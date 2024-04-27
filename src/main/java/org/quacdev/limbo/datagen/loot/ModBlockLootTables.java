@@ -32,6 +32,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.END_ABYSSAL_CLUSTER.get(),
                 block -> createOreDrops(ModBlocks.END_ABYSSAL_CLUSTER.get(), ModItems.LIMBO_EYE.get(), 1, 3));
 
+        this.add(ModBlocks.ABYSSAL_GRASS_BLOCK.get(),
+                block -> createSilkTouchableDrops(ModBlocks.ABYSSAL_GRASS_BLOCK.get(), ModBlocks.ABYSSAL_DIRT.get()));
+        this.dropSelf(ModBlocks.ABYSSAL_DIRT.get());
 
         this.dropSelf(ModBlocks.ABYSSAL_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_ABYSSAL_LOG.get());
@@ -60,5 +63,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                         LootItem.lootTableItem(item)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(min, max)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+    }
+
+    protected LootTable.Builder createSilkTouchableDrops(Block block, Block alt) {
+        return createSilkTouchDispatchTable(block, LootItem.lootTableItem(alt));
     }
 }

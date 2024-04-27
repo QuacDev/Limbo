@@ -39,6 +39,11 @@ public class ModBlocks {
                     .sound(SoundType.AMETHYST_CLUSTER).instrument(NoteBlockInstrument.CHIME)
                     .strength(50.0f, 3600000.0f).requiresCorrectToolForDrops())); // Obsidian Strength
 
+    public static final RegistryObject<Block> ABYSSAL_GRASS_BLOCK = registerBlock("abyssal_grass_block", () -> new AbyssalGrassBlock(
+            BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final RegistryObject<Block> ABYSSAL_DIRT = registerBlock("abyssal_dirt", () -> new Block(
+            BlockBehaviour.Properties.copy(Blocks.DIRT).mapColor(MapColor.COLOR_GRAY)));
+
     //region Abyssal Wood
     public static final RegistryObject<Block> ABYSSAL_LOG = registerBlock("abyssal_log", () -> new ModNonFlammableRotatedPillarBlock(
             BlockBehaviour.Properties.copy(Blocks.DARK_OAK_LOG)
@@ -62,9 +67,6 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ABYSSAL_SAPLING = registerBlock("abyssal_sapling", () -> new SaplingBlock(new AbyssalTreeGrower(),
             BlockBehaviour.Properties.copy(Blocks.CHERRY_SAPLING)));
-
-    public static final RegistryObject<Block> ABYSSAL_GRASS_BLOCK = registerBlock("abyssal_grass_block", () -> new AbyssalGrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).mapColor(MapColor.TERRACOTTA_PURPLE).noLootTable()));
     //endregion
     //endregion
 

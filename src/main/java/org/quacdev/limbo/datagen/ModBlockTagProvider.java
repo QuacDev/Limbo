@@ -47,5 +47,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.STRIPPED_ABYSSAL_WOOD.get());
         this.tag(BlockTags.PLANKS).add(
                 ModBlocks.ABYSSAL_PLANKS.get());
+
+        this.tag(BlockTags.DIRT).add(
+                ModBlocks.ABYSSAL_DIRT.get());
     }
 }
