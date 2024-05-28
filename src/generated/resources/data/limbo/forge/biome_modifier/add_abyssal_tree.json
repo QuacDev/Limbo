@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#limbo:is_abyssal_forest",
+  "features": "limbo:abyssal_tree_placed",
+  "step": "vegetal_decoration"
+}

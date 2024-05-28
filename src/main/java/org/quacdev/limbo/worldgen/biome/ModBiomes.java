@@ -1,6 +1,5 @@
 package org.quacdev.limbo.worldgen.biome;
 
-import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -15,7 +14,7 @@ public class ModBiomes {
     public static final ResourceKey<Biome> ABYSSAL_FOREST = register("abyssal_forest");
 
     public static void bootstrap(BootstapContext<Biome> context) {
-        context.register(ABYSSAL_FOREST, limboForest(context));
+        context.register(ABYSSAL_FOREST, abyssalForest(context));
     }
 
     private static ResourceKey<Biome> register(String name) {
@@ -36,7 +35,7 @@ public class ModBiomes {
         BiomeDefaultFeatures.addDefaultSprings(builder);
     }
 
-    private static Biome limboForest(BootstapContext<Biome> context) {
+    private static Biome abyssalForest(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         spawnBuilder.addSpawn(MobCategory.MONSTER,
                 new MobSpawnSettings.SpawnerData(EntityType.ENDERMAN, 5, 4, 4));

@@ -4,6 +4,8 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -14,11 +16,14 @@ import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import org.quacdev.limbo.Limbo;
+import org.quacdev.limbo.block.ModBlocks;
 
 import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> END_ABYSSAL_CLUSTER_PLACED_KEY = registerKey("end_abyssal_cluster_placed");
+
+    public static final ResourceKey<PlacedFeature> ABYSSAL_TREE_PLACED_KEY = registerKey("abyssal_tree_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -27,6 +32,9 @@ public class ModPlacedFeatures {
                 ModOrePlacement.commonOrePlacement(
                         1,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
+
+        register(context, ABYSSAL_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ABYSSAL_TREE_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(10, 0.1f, 2), ModBlocks.ABYSSAL_SAPLING.get()));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

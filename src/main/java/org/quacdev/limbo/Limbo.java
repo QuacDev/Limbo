@@ -27,6 +27,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.quacdev.limbo.item.ModItems;
+import org.quacdev.limbo.util.ModTags;
 import org.quacdev.limbo.worldgen.biome.ModTerrablender;
 import org.quacdev.limbo.worldgen.biome.surface.ModSurfaceRules;
 import org.slf4j.Logger;
@@ -50,6 +51,8 @@ public class Limbo {
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        ModTags.init();
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

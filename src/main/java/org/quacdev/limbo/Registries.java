@@ -4,6 +4,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import org.quacdev.limbo.block.ModBlocks;
 import org.quacdev.limbo.item.ModCreativeModeTabs;
 import org.quacdev.limbo.item.ModItems;
+import org.quacdev.limbo.util.ModTags;
 import org.quacdev.limbo.worldgen.biome.ModTerrablender;
 
 public final class Registries {
